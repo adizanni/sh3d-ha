@@ -1,5 +1,5 @@
 # Use the official Tomcat image as the base image
-FROM tomcat:jre21
+FROM tomcat:10-jre8-temurin-jammy
 
 # Set the working directory
 WORKDIR /app
