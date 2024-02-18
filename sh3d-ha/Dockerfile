@@ -1,5 +1,5 @@
 # Use the official Tomcat image as the base image
-FROM tomcat:10-jre8-temurin-jammy
+FROM tomcat:jre21-temurin-jammy
 
 # Set the working directory
 WORKDIR /app
@@ -7,6 +7,9 @@ WORKDIR /app
 #Startup script copy
 COPY run.sh /usr/local/bin/run.sh
 RUN chmod +x /usr/local/bin/run.sh 
+
+COPY setenv.sh /usr/local/tomcat/bin/setenv.sh
+RUN chmod +x /usr/local/tomcat/bin/setenv.sh
 
 #RUN sed -r  's/port="[0-9]{4}"/port="8880"/g' 
 #Some needed software
