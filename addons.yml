@@ -1,5 +1,0 @@
-channel: stable
-addons:
-  sh3d-ha:
-    repository: sh3d-ha/sh3d-ha
-    target: sh3d-ha
