@@ -7,7 +7,7 @@ codenotary: adizanni@gmail.com
 #ingress_entry: "/sweethome3djsha/"
 #ingress_stream: true
 host_network: true
-webui: http://homeassistant.local:[PORT:8080]/sweethome3djsha
+webui: http://[HOST]:[PORT:8080]/sweethome3djsha
 slug: "sh3d-ha"
 map:
   - share:rw
