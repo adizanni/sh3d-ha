@@ -1,4 +1,4 @@
-# shrd-ha SweetHome3D addon for Home Assistant and floor3d-card
+# sh3d-ha: SweetHome3D addon for Home Assistant and floor3d-card
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/AndyHA)
 
