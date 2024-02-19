@@ -1,26 +1,16 @@
 # Use the official Tomcat image as the base image
 FROM tomcat:jre21-temurin-jammy
 
-# Set the working directory
-WORKDIR /app
-
-#Startup script copy
-COPY run.sh /usr/local/bin/run.sh
-RUN chmod +x /usr/local/bin/run.sh 
-
-COPY setenv.sh /usr/local/tomcat/bin/setenv.sh
-RUN chmod +x /usr/local/tomcat/bin/setenv.sh
-
-#RUN sed -r  's/port="[0-9]{4}"/port="8880"/g' 
-#Some needed software
-RUN apt-get update && \
-    apt-get install jq -y
-
 # Move the extracted contents to the default web server directory
-COPY SweetHome3DJS-7.2.war /usr/local/tomcat/webapps/sweethome3djsha.war
+COPY rootfs /
 
 # Add configuration to catalina.properties to skip unnecessary JARs during TLD scanning
-RUN echo "tomcat.util.scan.StandardJarScanFilter.jarsToSkip=*" >> /usr/local/tomcat/conf/catalina.properties
+# RUN echo "tomcat.util.scan.StandardJarScanFilter.jarsToSkip=*" >> /usr/local/tomcat/conf/catalina.properties
+
+RUN chmod +x /usr/local/bin/run.sh && \
+    chmod +x /usr/local/tomcat/bin/setenv.sh && \
+    apt-get update && \
+    apt-get install jq -y
 
 # Start the Tomcat server
 CMD ["run.sh"]
