@@ -1,15 +1,13 @@
 name: "Sweet Home 3D for YHDT card"
 description: "Sweet Home 3D for Your Home Digital Twin Card (aka floor3d-card)"
-version: "0.0.23"
-#version: "0.0.3"
-codenotary: adizanni@gmail.com
-#ingress: true
-#ingress_port: 8080
-#ingress_entry: "/sweethome3djsha/"
-#ingress_stream: true
-host_network: true
-webui: http://[HOST]:[PORT:8080]/sweethome3djsha
 slug: "sh3d-ha"
+version: "0.0.24"
+codenotary: adizanni@gmail.com
+ingress: true
+ingress_port: 8080
+ingress_entry: "sweethome3djsha/"
+#host_network: true
+#webui: http://[HOST]:[PORT:8080]/sweethome3djsha
 map:
   - share:rw
   - homeassistant_config:rw
@@ -24,4 +22,4 @@ schema:
   model_folder: str
   export_to_HA_folder: str
   resources_folder: str
-image: adizanni/hassioaddon-sh3d-{arch}
+image: adizanni/sh3d-ha-addon-{arch}
