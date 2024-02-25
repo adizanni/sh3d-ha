@@ -1,7 +1,7 @@
 name: "Sweet Home 3D for YHDT card"
 description: "Sweet Home 3D for Your Home Digital Twin Card (aka floor3d-card)"
 slug: "sh3d-ha"
-version: "0.0.26"
+version: "0.0.27"
 codenotary: adizanni@gmail.com
 #ingress: true
 #ingress_port: 8080
